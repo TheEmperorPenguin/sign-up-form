@@ -3,21 +3,23 @@
   padding: 0;
   --picture-container-width: 35vw;
   box-sizing: border-box;
+  user-select: none;
 }
-a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: underline; /* no underline */
-}
+
 body {
   height: 100vh;
   display: flex;
   flex-direction: row;
   width: 100vw;
+  background-color: rgba(0, 0, 0, 0.048);
 }
 div {
   display: flex;
 }
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
 /* css for the picture side */
 
 img {
@@ -137,6 +139,40 @@ form {
   outline: 1px solid rgb(24, 230, 69);
   appearance: none;
 }
-.form > input:valid:after {
-  content: "YES";
+
+
+
+
+/* css pour les boutons du bas */
+
+.form-submit{
+  padding: 3vh 15vw 5vh 9vw;
+  flex-direction: column;
+}
+.form-submit > button {
+  color: white;
+  font-size: 20px;
+  height: 70px;
+  width: 240px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: black 2px 2px 15px 2px;
+  background-color: #273f41;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+.form-submit > button:active{
+  transform: translate(0, 2px);
+  box-shadow: black 2px 0 15px 2px;
+}
+.form-submit > p {
+  font-size: 20px;
+}
+.form-submit > p > a {
+  color: #273f41;
+  text-decoration: none;
+}
+.form-submit > p > a:hover {
+  text-decoration: underline;
 }
